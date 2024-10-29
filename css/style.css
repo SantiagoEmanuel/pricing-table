@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&display=swap");
+
+:root {
+  --header-size: 2rem;
+  --header-weight: 700;
+
+  --pricing-size: 4rem;
+  --pricing-weight: 600;
+
+  --body-text: 1rem;
+  --body-weight-regular: 400;
+  --body-weight-semibold: 600;
+
+  --header-border-bottom: #4d556233;
+
+  --background-color: #ffffff;
+  --text-color: #121826;
+
+  --table-bottom-border: #e5e7eb;
+  --table-text-cta-color: #3662e3;
+  --table-background-popular-cta: #e9a23b;
+  --table-popular-color: #f8fafc;
+  --table-popular-bottom-border: #4d5562;
+
+  --font-family: "Be Vietnam Pro";
+  background-color: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  padding: 3rem 0;
+  background-image: url(../assets/sand-background-image.png);
+  border-bottom: 1px solid var(--header-border-bottom);
+}
+
+.header h1 {
+  text-align: center;
+  font-size: var(--header-size);
+  font-weight: var(--header-weight);
+  line-height: 1.75;
+}
+
+.header h2 {
+  text-wrap: balance;
+  text-align: center;
+  font-size: var(--body-text);
+  font-weight: var(--body-weight-regular);
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  align-content: center;
+  padding: 4rem 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+table tbody tr {
+  text-align: center;
+  border-bottom: 1px solid var(--table-bottom-border);
+}
+
+table tbody tr:last-child {
+  border-bottom: 0px;
+}
+
+table tbody th {
+  text-align: left;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.table-head th p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-head th .span {
+  font-size: var(--body-text);
+  color: var(--table-text-cta-color);
+}
+
+.table-head th .popular {
+  font-size: var(--body-text);
+  background-color: var(--table-text-cta-color);
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2px 12px;
+}
+
+.table-head th .pricing {
+  font-size: var(--pricing-size);
+  font-weight: var(--pricing-weight);
+}
+
+.popular {
+  background-color: var(--text-color);
+  color: var(--table-popular-color);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+}
+
+.popular-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.popular-bottom {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--table-background-popular-cta);
+}
+
+.cta .free p,
+.cta .team p,
+.cta .popular p,
+.cta .enterprise p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  font-size: var(--body-text);
+  font-weight: var(--body-weight-semibold);
+  transition: 0.15s all ease;
+  cursor: pointer;
+}
+
+@media (width <= 1024px) {
+  .free {
+    display: none;
+  }
+}
+
+@media (width <= 730px) {
+  .team {
+    display: none;
+  }
+}
